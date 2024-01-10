@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: '3.8'
       - name: Install dependencies
-        run: pip install dbt-snowflake
+        run: pip install dbt-snowflake --force-reinstall
       - name: Run deps
         run: dbt deps
       - name: Run dbt
