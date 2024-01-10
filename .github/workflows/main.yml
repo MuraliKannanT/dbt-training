@@ -14,8 +14,7 @@ jobs:
           python-version: '3.8'
       - name: Install dependencies
         run: |
-          pip install dbt-core
-          pip install dbt-snowflake
+          pip3 install dbt-snowflake
           dbt deps
       - name: Run dbt
         run: |
