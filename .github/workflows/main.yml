@@ -1,7 +1,7 @@
 name: Deploy_dbt
 on:
  schedule:
-    - cron: 0/5 * * * *
+    - cron: "0/5 * * * *"
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,7 +14,7 @@ jobs:
           python-version: '3.8'
       - name: Install dependencies
         run: |
-          pip3 install dbt-snowflake
+          pip install dbt
           dbt deps
       - name: Run dbt
         run: |
