@@ -1,7 +1,7 @@
 name: Deploy_dbt
 on:
   schedule
-    - cron: "0/5 * * * *"
+    - cron: 0/5 * * * *
   env:
     DBT_PROFILES_DIR: ./
     DBT_SNOWFLAKE_USERNAME: sachin
