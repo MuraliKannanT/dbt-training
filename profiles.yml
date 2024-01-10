@@ -1,0 +1,52 @@
+cosmosproject:
+  outputs:
+    dev:
+      account: otqpizx-nxa28898
+      database: analytics
+      password: Kannan$123
+      role: sysadmin
+      schema: sch_air
+      threads: 3
+      type: snowflake
+      user: murali
+      warehouse: compute_wh
+  target: dev
+demo_dbt_airflow:
+  outputs:
+    dev:
+      account: otqpizx-nxa28898
+      database: mkmotors_dev
+      password: Kannan$123
+      role: sysadmin
+      schema: staging
+      threads: 3
+      type: snowflake
+      user: murali
+      warehouse: compute_wh
+  target: dev
+prj01:
+  outputs:
+    dev:
+      account: fqb16614
+      database: analytics
+      password: Sachin@10
+      role: analyticsengineer
+      schema: dbt_murali
+      threads: 3
+      type: snowflake
+      user: sachin
+      warehouse: transform_wh
+  target: dev
+prjair:
+  outputs:
+    dev:
+      account: otqpizx-nxa28898
+      database: analytics
+      password: Kannan$123
+      role: sysadmin
+      schema: air_dbt
+      threads: 3
+      type: snowflake
+      user: murali
+      warehouse: compute_wh
+  target: dev
