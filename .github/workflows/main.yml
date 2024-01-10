@@ -13,13 +13,11 @@ jobs:
         with:
           python-version: '3.8'
       - name: Install dependencies
-        run: |
-          pip install dbt
-          dbt deps
+        run: pip install dbt
+      - name: Run deps
+        run: dbt deps
       - name: Run dbt
-        run: |
-          dbt run
+        run: dbt run
       - name: Test using dbt
-        run: |
-          dbt test
+        run: dbt test
            
