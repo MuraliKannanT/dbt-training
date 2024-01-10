@@ -2,28 +2,23 @@ name: Deploy_dbt
 on:
   schedule:
     - cron: '0/5 * * * *'
-  env:
-    DBT_PROFILES_DIR: ./
-    DBT_SNOWFLAKE_USERNAME: sachin
-    DBT_SNOWFLAKE_PW: Sachin@10
-    DBT_SNOWFLAKE_ROLE: ANALYTICSENGINEER  
-  jobs:
-    deploy:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@masterbranch
-        - name: Set up Python
-          uses: actions/setup-python@v2
-          with:
-            python-version: '3.8'
-        - name: Install dependencies
-          run: |
-            pip install dbt
-            dbt deps
-        - name: Run dbt
-          run: |
-            dbt run
-        - name: Test using dbt 
-            dbt test
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@masterbranch
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: Install dependencies
+        run: |
+          pip install dbt
+          dbt deps
+      - name: Run dbt
+        run: |
+          dbt run
+      - name: Test using dbt 
+          dbt test
            
