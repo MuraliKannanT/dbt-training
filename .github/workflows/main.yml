@@ -19,6 +19,7 @@ jobs:
       - name: Run dbt
         run: |
           dbt run
-      - name: Test using dbt 
+      - name: Test using dbt
+        run: |
           dbt test
            
